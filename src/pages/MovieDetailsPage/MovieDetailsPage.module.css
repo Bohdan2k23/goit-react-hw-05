@@ -1,0 +1,28 @@
+.btn {
+    width: 100px;
+   margin-bottom: 10px;
+}
+.btnLink {
+color: black;
+text-decoration: none;
+}
+.wrap {
+    display: flex;
+    gap: 10px;
+    /* align-items: flex-end; */
+    
+}
+.img {
+   
+}
+.titleWrap {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+.genresList {
+    display: flex;
+    list-style-type: none;
+    gap: 5px;
+    padding-left: 0;
+}
