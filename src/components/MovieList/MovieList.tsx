@@ -8,15 +8,15 @@ export default function MovieList({ trendMovies }) {
       <ul className={css.list}>
         {trendMovies.map((trendMovie) => (
           <li key={trendMovie.id}>
-            <p>
+            
               <Link
                 to={`/movies/${trendMovie.id}`}
                 state={location}
-                className={css.link}
+                className="btn"
               >
                 {trendMovie.title}
               </Link>
-            </p>
+           
           </li>
         ))}
       </ul>

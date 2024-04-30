@@ -7,13 +7,16 @@ export default function Navigation() {
     return clsx(css.link, isActive && css.active);
   };
   return (
+   <header className={css.header}> 
+    <h2>Logo</h2>
     <nav className={css.navigation}>
-      <NavLink to="/" className={getNavLinkByClass}>
-        Home
-      </NavLink>
-      <NavLink to="/movies" className={getNavLinkByClass}>
-        Movies
-      </NavLink>
-    </nav>
+   <NavLink to="/" className={getNavLinkByClass}>
+     Home
+   </NavLink>
+   <NavLink to="/movies" className={getNavLinkByClass}>
+     Movies
+   </NavLink>
+ </nav>
+ </header>
   );
 }

@@ -28,18 +28,25 @@ export default function MovieCast() {
 
   return (
     <div>
-      {error && <p>Sorry, we are working on providing this information</p>}
+      {error && (
+        <p>
+          Sorry, we are working on providing this
+          information
+        </p>
+      )}
       {loading && <p>Loading cast list...</p>}
-      <ul>
+      <ul className={css.list}>
         {castItem.map((actor) => (
-          <li key={actor.id}>
+          <li key={actor.id} className={css.item}>
             <img
               src={`https://image.tmdb.org/t/p/w500${actor.profile_path}`}
               alt={actor.name}
               className={css.img}
             />
-            <h1>{actor.name}</h1>
-            <p>{actor.character}</p>
+            <div>
+              <h3>{actor.name}</h3>
+              <p>{actor.character}</p>
+            </div>
           </li>
         ))}
       </ul>

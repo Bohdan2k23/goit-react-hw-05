@@ -1,0 +1,11 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 40px;
+}
+.list li {
+  background-color: #23263c;
+  border-radius: 10px;
+  padding: 20px;
+}

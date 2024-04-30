@@ -3,11 +3,13 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { MovieData } from "../../lib/types";
 
-// import css from "./MovieReviews.module.css";
+import css from "./MovieReviews.module.css";
 
 export default function MovieReviews() {
   const { movieId } = useParams();
-  const [reviewItem, setReviewItem] = useState<MovieData[]>([]);
+  const [reviewItem, setReviewItem] = useState<MovieData[]>(
+    []
+  );
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
 
@@ -28,12 +30,14 @@ export default function MovieReviews() {
 
   return (
     <div>
-      {error && <p>We don't have any reviews for this movie.</p>}
+      {error && (
+        <p>We don't have any reviews for this movie.</p>
+      )}
       {loading && <p>Loading reviews list...</p>}
       {reviewItem.length === 0 && (
         <p>We don't have any reviews for this movie.</p>
       )}
-      <ul>
+      <ul className={css.list}>
         {reviewItem.map((review) => (
           <li key={review.id}>
             <h1>Author {review.author}</h1>

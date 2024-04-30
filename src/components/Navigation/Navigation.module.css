@@ -2,19 +2,21 @@
     display: inline-flex;
     padding: 8px;
     text-decoration: none;
-    color: black;
+    color: white;
     font-size: 24px;
 }
 
 .link:hover {
-    color: orangered;
+    color: #585e8f;
     text-decoration: underline;
 }
 
 .active {
-    color: red;
+    color: #7581D6;
 }
-.navigation{
-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-    margin-bottom: 20px
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px
 }
