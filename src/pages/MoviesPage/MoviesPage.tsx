@@ -5,18 +5,15 @@ import { fetch } from "../../movies-api";
 import { useState } from "react";
 import { useSearchParams } from "react-router-dom";
 
-// import css from "./MoviesPage.module.css";
+// import css from "./MoviesPage.module.css";S
 
 export default function MoviesPage() {
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
-  const [query, setQuery] = useState("");
   const [params, setParams] = useSearchParams();
 
   const onSearch = async (newQuery: string) => {
-    setQuery(newQuery);
-
     try {
       setLoading(true);
       const data = await fetch.search(newQuery);
@@ -41,7 +38,9 @@ export default function MoviesPage() {
       />
       {loading && <p>Loading movies list...</p>}
       {error && <p>No movies found</p>}
-      {movies.length > 0 && <MovieList trendMovies={movies} />}
+      {movies.length > 0 && (
+        <MovieList trendMovies={movies} />
+      )}
     </div>
   );
 }
